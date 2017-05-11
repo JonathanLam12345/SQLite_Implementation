@@ -8,15 +8,23 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity
 {
     JonathanHelper jonathanHelper;
+    String userName;
+    String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         jonathanHelper = new JonathanHelper(this);
+    }
 
-
+    public void addUser()
+    {
+        userName = "Jonathan Lam";
+        password = "password123";
 
         /*
         SQLite is efficient because it avoid the database creation overhead by
@@ -28,5 +36,7 @@ public class MainActivity extends AppCompatActivity
         */
         //sqLiteDatabase is a reference to the datbase.
         SQLiteDatabase sqLiteDatabase = jonathanHelper.getWritableDatabase();
+
     }
 }
+

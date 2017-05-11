@@ -3,6 +3,9 @@ package com.example.jonathanlam.sqlite_slidenerd;
 //161 Android SQLite Database Schema Part 2 |
 //https://www.youtube.com/watch?v=ge7m4nWmggs&t=2s&nohtml5=False
 
+//163 Android SQLite Insert Tutorial Part 2 |
+//https://www.youtube.com/watch?v=0JNP7El2kHs&nohtml5=False
+
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -46,10 +49,11 @@ public class JonathanHelper extends SQLiteOpenHelper
 
     }
 
+    //onUpgrade exxecutes ONLY when you add a column to the database and change the (version number + 1)
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
     {
-        String queryDelete = "DROP TABLE " + TABLE_NAME + "IF EXISTS";
+        String queryDelete = "DROP TABLE " + TABLE_NAME + "IF EXISTS;";
 
         try
         {
