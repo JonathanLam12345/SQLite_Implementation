@@ -23,9 +23,10 @@ public class MainActivity extends AppCompatActivity
         creating the database only when someone tries accessing it for the first time.
         By initializing JonathanHelper, we have not yet accessed the database,
         to access the database object that represents the physical database file stored
-        on our device, called the getWriteDatabase() method and that ll trigger the
+        on our device, called the getWriteDatabase() method and that'll trigger the
         other lifecycle methods of SQLiteOpenHelper.
         */
+        //sqLiteDatabase is a reference to the datbase.
         SQLiteDatabase sqLiteDatabase = jonathanHelper.getWritableDatabase();
     }
 }
